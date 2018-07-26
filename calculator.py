@@ -10,10 +10,10 @@ import traceback
 
 def index(*args):
     page_text = str("""<h1>WSGI Calculator HW4</h1>
-    <p>To add numbers follow this logic in URL: http://localhost:8080/add/23/42=> 65</p>
-    <p>To subtract numbers follow this logic in URL: http://localhost:8080/subtract/23/42=> -19</p>
-    <p>To multiply numbers follow this logic in URL: http://localhost:8080/multiply/3/5=> 15</p>
-    <p>To divide numbers follow this logic in URL: http://localhost:8080/divide/22/11=> 2</p>
+    <p>To add numbers follow this logic in URL: http://localhost:8080/add/23/42 =>65</p>
+    <p>To subtract numbers follow this logic in URL: http://localhost:8080/subtract/23/42 =>-19</p>
+    <p>To multiply numbers follow this logic in URL: http://localhost:8080/multiply/3/5 =>15</p>
+    <p>To divide numbers follow this logic in URL: http://localhost:8080/divide/22/11 =>2</p>
     <p>Any number of arguments may be provided in URL i.e. add/24/5/7/9/10</p>
     """)
 
@@ -24,7 +24,7 @@ def add(*args):
     """Returns a STRING with the sum of the arguments"""
 
     numbers = [int(i) for i in args]
-    result = str(sum([int(i) for i in numbers]))
+    result = str(sum(numbers))
 
     return result
 
